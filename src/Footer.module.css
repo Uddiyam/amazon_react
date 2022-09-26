@@ -1,79 +1,67 @@
-.footer__top {
-    background-color: #485769;
-    height: 100px;
-    padding-top: 1px;
-}
-
-.footer__top:hover {
-    background-color: #485769;
-    height: 100px;
-    padding-top: 1px;
-    opacity: 0.8;
-}
-
-.footer__arrow {
-    font-size: 50px;
-    color : white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-    opacity: 0.6;
-}
-
-.footer__arrow:hover {
-    font-size: 65px;
-    opacity: 0.6;
-}
-
-.footer__middle__row {
-    background-color: #232f3e;
-    color : white;
+.Container{
+    bottom: 0;
     width: 100%;
-    margin-bottom: 1px;
-    margin : 0 auto auto 1;
-    padding : 1% 0 3% 30%;
 }
 
-.footer__middle__col {
-    display: table-cell;
-    padding: 1% 0 1% ;
-    line-height: 19px;
-}
-
-.footer__middle__title {
-    margin-bottom: 3%;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 0 10px;
-}
-
-.footer__middle__col > ul {
-    list-style: none;
-    margin : 0;
-    padding-left: 6%;
-
-}
-
-
-
-.footer__bottom {
-    background-color: #232f3e;
-    height: 70px;
+.UpBtn{
+    background-color: #37475a;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    padding : 2% 0 0 0;
+    font-size: 2em;
+    padding-bottom: 1%;
 }
 
-.footer__image {
-    width: 7%;
+.UpBtn:hover{
+    background-color: #485769;
+}
+
+.FooterWrap{
+    background-color: #232f3e;
+    height: 100%;
+}
+
+.UpIcon:hover{
+    font-size: 45px;
+}
+
+.UpIcon{
+    color: white;
+    vertical-align: bottom;
+}
+
+.FooterLogo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 2% 1% 40%;
+
+}
+
+.Content{
+    margin: 0 10% 0 25%;
+    padding: 2% 0 1% 0;
+}
+
+.Title{
+    color:white;
+    font-size: large;
+    line-height: 2em;
+}
+
+.TextWrap{
+
+    padding: 0 2% 1.5% 2%;
+    margin-bottom: 1%;
+    float: left;
+    vertical-align: super;
+    color: white;
+    font-size: small;
+}
+
+.TextWrap:last-child{
+    float: none;
+}
+
+.FooterText{
+    color: white;
+    vertical-align: top;
     height: 50px;
-}
-
-
-.footer__bottom > p {
-    color : white;
-    padding-left: 1%;
-    font-size: 18px;
 }

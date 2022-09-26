@@ -1,69 +1,94 @@
-import React from 'react';
 import styles from "./Footer.module.css";
-import {IoIosArrowUp} from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
-function Footer() {
+export default function Footer() {
+    const clickToTop = () => {
+        window.scrollTo(0, 0);
+    };
 
-    const gototop = () => {
-        window.scrollTo(0,0)
-    }
+    const content = [
+    {
+        title: "Get to Know Us",
+        lists: {
+            text1: "About",
+            text2: "Career",
+            text3: "Press",
+            text4: "Amazon Cares",
+            text5: "Gift a smile",
+        },
+    },
+    {
+        title: "Connect with us",
+        lists: {
+            text1: "Facebook",
+            text2: "Twitter",
+            text3: "Instagram",
+        },
+    },
 
-    return (<>
-    <div className={styles.footer__top} onClick={gototop}>
-        <IoIosArrowUp className={styles.footer__arrow}/>
+    {
+        title: "Make Money with Us",
+        lists: {
+            text1: "Sell on fake Amazon",
+            text2: "Sell under fake Amazon",
+            text3: "Become an Affiliate",
+            text4: "Fulfilment by Amazon",
+            text5: "Amazon Pay",
+        },
+    },
+    {
+        title: "Connect with us",
+        lists: {
+            text1: "COVID-19 and Amazon",
+            text2: "Your Account",
+            text3: "Returns Centre",
+            text4: "100% Purchase Protection",
+            text5: "Amazon App Download",
+            text6: "Amazon Assistant Download",
+            text7: "Help",
+        },
+    },
+];
+
+    return (
+    <div className={styles.Container}>
+        <div className={styles.UpBtn} onClick={clickToTop}>
+        <IoIosArrowUp className={styles.UpIcon} />
     </div>
-    <div className={styles.footer__middle__row}>
 
-        <div className={styles.footer__middle__col}>
-            <div className={styles.footer__middle__title}>Get to Know Us</div>
-            <ul>
-                <li>About</li>
-                <li>Career</li>
-                <li>Press</li>
-                <li>Amazon Cares</li>
-                <li>Gift a smile</li>
-            </ul>
+    <div className={styles.FooterWrap}>
+        <div className={styles.Content}>
+            {content.map((a, i) => {
+                return (
+                <>
+                    <div className={styles.TextWrap}>
+                        <div className={styles.Title}>
+                        <b>{a.title}</b>
+                    </div>
+
+                    <div>{a.lists.text1}</div>
+                    <div>{a.lists.text2}</div>
+                    <div>{a.lists.text3}</div>
+                    <div>{a.lists.text4}</div>
+                    <div>{a.lists.text5}</div>
+                    <div>{a.lists.text6}</div>
+                    <div>{a.lists.text7}</div>
+                </div>
+            </>
+            );
+        })}
         </div>
 
-        <div className={styles.footer__middle__col}>
-            <div className={styles.footer__middle__title}>Connect with us</div>
-            <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-            </ul>
-        </div>
+        <div>
+            <hr style={{ margin: "0 0 2% 0" }} />
 
-        <div className={styles.footer__middle__col}>
-            <div className={styles.footer__middle__title}>Make Money with us</div>
-            <ul>
-                <li>Sell on fake Amazon</li>
-                <li>Sell under fake Amazon</li>
-                <li>Become an Affiliate</li>
-                <li>Fulfilment by Amazon</li>
-                <li>Amazon Pay</li>
-            </ul>
+            <img
+            className={styles.FooterLogo}
+            src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+            alt=""/>
+            <span className={styles.FooterText}>fake amazon clone developed by &copy; </span>
         </div>
-
-        <div className={styles.footer__middle__col}>
-            <div className={styles.footer__middle__title}>Connect with us</div>
-            <ul>
-                <li>COVID-19 and Amazon</li>
-                <li>Your Account</li>
-                <li>Returns Centre</li>
-                <li>100% Purchase Protection</li>
-                <li>Amazon App Download</li>
-                <li>Amazon Assistant Download</li>
-                <li>Help</li>
-            </ul>
         </div>
-    </div> 
-
-    <div className={styles.footer__bottom}>
-        <img className={styles.footer__image} src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
-        <p className={styles.footer_right}>fake amazon clone developed by © HCC LAB</p>
     </div>
-    </>)
+);
 }
-
-export default Footer;
