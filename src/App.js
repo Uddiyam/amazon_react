@@ -12,12 +12,11 @@ function App() {
       <Header />
 
       <Routes>
+        <Route path='/' element={<Home/>} />
         <Route path='/Profile' element={<Profile/>} /> 
         <Route path='/Cart' element={<Cart />} />
       </Routes>
       
-        <Home/>
-
       <Footer/>
 
 
