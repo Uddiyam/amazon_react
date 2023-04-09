@@ -30,7 +30,6 @@ export default function Deal() {
               className="Img"
               src="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
             />
-            <p>하윙</p>
           </div>
           <div className="Wrap">
             <img
